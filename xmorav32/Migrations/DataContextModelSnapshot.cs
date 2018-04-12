@@ -27,6 +27,8 @@ namespace xmorav32.Migrations
 
                     b.Property<string>("Name");
 
+                    b.Property<int>("test");
+
                     b.HasKey("Id");
 
                     b.ToTable("Albums");
@@ -76,6 +78,8 @@ namespace xmorav32.Migrations
                     b.Property<string>("Format");
 
                     b.Property<Guid>("IdOfAlbum");
+
+                    b.Property<string>("Name");
 
                     b.Property<string>("Note");
 

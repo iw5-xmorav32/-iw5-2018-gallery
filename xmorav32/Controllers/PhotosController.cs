@@ -8,24 +8,24 @@ using Microsoft.EntityFrameworkCore;
 using xmorav32.Data;
 using xmorav32.Models;
 
-namespace xmorav32.Controller
+namespace xmorav32.Controllers
 {
-    public class AlbumsController : Controller
+    public class PhotosController : Controller
     {
         private readonly DataContext _context;
 
-        public AlbumsController(DataContext context)
+        public PhotosController(DataContext context)
         {
             _context = context;
         }
 
-        // GET: Albums
+        // GET: Photos
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Albums.ToListAsync());
+            return View(await _context.Photo.ToListAsync());
         }
 
-        // GET: Albums/Details/5
+        // GET: Photos/Details/5
         public async Task<IActionResult> Details(Guid? id)
         {
             if (id == null)
@@ -33,40 +33,44 @@ namespace xmorav32.Controller
                 return NotFound();
             }
 
-            var album = await _context.Albums
+            var photos = await _context.Photo
                 .SingleOrDefaultAsync(m => m.Id == id);
-            if (album == null)
+            if (photos == null)
             {
                 return NotFound();
             }
 
-            return View(album);
+            return View(photos);
         }
 
-        // GET: Albums/Create
+        // GET: Photos/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Albums/Create
+        // POST: Photos/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Name,Id")] Album album)
+        public async Task<IActionResult> Create([Bind("Date,Note,Name")] Photos photos)
         {
+            photos.IdOfAlbum = Guid.NewGuid();
+            photos.Format = "jpg";
+            photos.Resolution = "1920x500";
+
             if (ModelState.IsValid)
             {
-                album.Id = Guid.NewGuid();
-                _context.Add(album);
+                photos.Id = Guid.NewGuid();
+                _context.Add(photos);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(album);
+            return View(photos);
         }
 
-        // GET: Albums/Edit/5
+        // GET: Photos/Edit/5
         public async Task<IActionResult> Edit(Guid? id)
         {
             if (id == null)
@@ -74,22 +78,22 @@ namespace xmorav32.Controller
                 return NotFound();
             }
 
-            var album = await _context.Albums.SingleOrDefaultAsync(m => m.Id == id);
-            if (album == null)
+            var photos = await _context.Photo.SingleOrDefaultAsync(m => m.Id == id);
+            if (photos == null)
             {
                 return NotFound();
             }
-            return View(album);
+            return View(photos);
         }
 
-        // POST: Albums/Edit/5
+        // POST: Photos/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("Name,Id")] Album album)
+        public async Task<IActionResult> Edit(Guid id, [Bind("Date,Format,Resolution,Note,IdOfAlbum,Id")] Photos photos)
         {
-            if (id != album.Id)
+            if (id != photos.Id)
             {
                 return NotFound();
             }
@@ -98,12 +102,12 @@ namespace xmorav32.Controller
             {
                 try
                 {
-                    _context.Update(album);
+                    _context.Update(photos);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!AlbumExists(album.Id))
+                    if (!PhotosExists(photos.Id))
                     {
                         return NotFound();
                     }
@@ -114,10 +118,10 @@ namespace xmorav32.Controller
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(album);
+            return View(photos);
         }
 
-        // GET: Albums/Delete/5
+        // GET: Photos/Delete/5
         public async Task<IActionResult> Delete(Guid? id)
         {
             if (id == null)
@@ -125,30 +129,30 @@ namespace xmorav32.Controller
                 return NotFound();
             }
 
-            var album = await _context.Albums
+            var photos = await _context.Photo
                 .SingleOrDefaultAsync(m => m.Id == id);
-            if (album == null)
+            if (photos == null)
             {
                 return NotFound();
             }
 
-            return View(album);
+            return View(photos);
         }
 
-        // POST: Albums/Delete/5
+        // POST: Photos/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
-            var album = await _context.Albums.SingleOrDefaultAsync(m => m.Id == id);
-            _context.Albums.Remove(album);
+            var photos = await _context.Photo.SingleOrDefaultAsync(m => m.Id == id);
+            _context.Photo.Remove(photos);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool AlbumExists(Guid id)
+        private bool PhotosExists(Guid id)
         {
-            return _context.Albums.Any(e => e.Id == id);
+            return _context.Photo.Any(e => e.Id == id);
         }
     }
 }

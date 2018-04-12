@@ -11,7 +11,7 @@ using xmorav32.Data;
 namespace xmorav32.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20180317102510_InitialCreate")]
+    [Migration("20180412221059_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,6 +27,8 @@ namespace xmorav32.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Name");
+
+                    b.Property<int>("test");
 
                     b.HasKey("Id");
 
@@ -77,6 +79,8 @@ namespace xmorav32.Migrations
                     b.Property<string>("Format");
 
                     b.Property<Guid>("IdOfAlbum");
+
+                    b.Property<string>("Name");
 
                     b.Property<string>("Note");
 

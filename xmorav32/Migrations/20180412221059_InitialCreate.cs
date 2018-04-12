@@ -13,7 +13,8 @@ namespace xmorav32.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
-                    Name = table.Column<string>(nullable: true)
+                    Name = table.Column<string>(nullable: true),
+                    test = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -57,6 +58,7 @@ namespace xmorav32.Migrations
                     Date = table.Column<DateTime>(nullable: false),
                     Format = table.Column<string>(nullable: true),
                     IdOfAlbum = table.Column<Guid>(nullable: false),
+                    Name = table.Column<string>(nullable: true),
                     Note = table.Column<string>(nullable: true),
                     Resolution = table.Column<string>(nullable: true)
                 },
