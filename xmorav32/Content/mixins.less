@@ -1,0 +1,15 @@
+.posCenter(@offset: 0) {
+	top: @offset;
+	bottom: @offset;
+	left: @offset;
+	right: @offset;
+	margin: auto;
+}
+
+.transition(@element: all, @time: 0.15s, @type: linear) {
+	-webkit-transition: @element @time @type;
+	-moz-transition: @element @time @type;
+	-ms-transition: @element @time @type;
+	-o-transition: @element @time @type;
+	transition: @element @time @type;
+}
