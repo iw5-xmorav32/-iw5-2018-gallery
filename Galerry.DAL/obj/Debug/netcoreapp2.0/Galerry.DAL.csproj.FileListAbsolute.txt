@@ -1,0 +1,11 @@
+C:\Users\Matej\source\repos\IW5\ConsoleApp1\bin\Debug\netcoreapp2.0\Galerry.DAL.deps.json
+C:\Users\Matej\source\repos\IW5\ConsoleApp1\bin\Debug\netcoreapp2.0\Galerry.DAL.runtimeconfig.json
+C:\Users\Matej\source\repos\IW5\ConsoleApp1\bin\Debug\netcoreapp2.0\Galerry.DAL.runtimeconfig.dev.json
+C:\Users\Matej\source\repos\IW5\ConsoleApp1\bin\Debug\netcoreapp2.0\Galerry.DAL.dll
+C:\Users\Matej\source\repos\IW5\ConsoleApp1\bin\Debug\netcoreapp2.0\Galerry.DAL.pdb
+C:\Users\Matej\source\repos\IW5\ConsoleApp1\obj\Debug\netcoreapp2.0\Galerry.DAL.csprojResolveAssemblyReference.cache
+C:\Users\Matej\source\repos\IW5\ConsoleApp1\obj\Debug\netcoreapp2.0\Galerry.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Matej\source\repos\IW5\ConsoleApp1\obj\Debug\netcoreapp2.0\Galerry.DAL.AssemblyInfoInputs.cache
+C:\Users\Matej\source\repos\IW5\ConsoleApp1\obj\Debug\netcoreapp2.0\Galerry.DAL.AssemblyInfo.cs
+C:\Users\Matej\source\repos\IW5\ConsoleApp1\obj\Debug\netcoreapp2.0\Galerry.DAL.dll
+C:\Users\Matej\source\repos\IW5\ConsoleApp1\obj\Debug\netcoreapp2.0\Galerry.DAL.pdb
