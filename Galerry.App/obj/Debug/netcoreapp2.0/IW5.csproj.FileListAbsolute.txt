@@ -1,0 +1,11 @@
+C:\Users\Matej\source\repos\IW5\IW5\bin\Debug\netcoreapp2.0\IW5.deps.json
+C:\Users\Matej\source\repos\IW5\IW5\bin\Debug\netcoreapp2.0\IW5.runtimeconfig.json
+C:\Users\Matej\source\repos\IW5\IW5\bin\Debug\netcoreapp2.0\IW5.runtimeconfig.dev.json
+C:\Users\Matej\source\repos\IW5\IW5\bin\Debug\netcoreapp2.0\IW5.dll
+C:\Users\Matej\source\repos\IW5\IW5\bin\Debug\netcoreapp2.0\IW5.pdb
+C:\Users\Matej\source\repos\IW5\IW5\obj\Debug\netcoreapp2.0\IW5.csprojResolveAssemblyReference.cache
+C:\Users\Matej\source\repos\IW5\IW5\obj\Debug\netcoreapp2.0\IW5.csproj.CoreCompileInputs.cache
+C:\Users\Matej\source\repos\IW5\IW5\obj\Debug\netcoreapp2.0\IW5.AssemblyInfoInputs.cache
+C:\Users\Matej\source\repos\IW5\IW5\obj\Debug\netcoreapp2.0\IW5.AssemblyInfo.cs
+C:\Users\Matej\source\repos\IW5\IW5\obj\Debug\netcoreapp2.0\IW5.dll
+C:\Users\Matej\source\repos\IW5\IW5\obj\Debug\netcoreapp2.0\IW5.pdb
