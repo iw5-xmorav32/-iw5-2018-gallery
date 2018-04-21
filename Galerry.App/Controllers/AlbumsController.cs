@@ -5,8 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Galerry.App.Data;
-using Galerry.App.Models;
+using Galerry.App.ViewModels;
+using Galerry.DAL;
+
 
 namespace Galerry.App.Controllers
 {
@@ -33,14 +34,14 @@ namespace Galerry.App.Controllers
                 return NotFound();
             }
 
-            var album = await _context.Albums
+            var AlbumViewModel = await _context.Albums
                 .SingleOrDefaultAsync(m => m.Id == id);
-            if (album == null)
+            if (AlbumViewModel == null)
             {
                 return NotFound();
             }
 
-            return View(album);
+            return View(AlbumViewModel);
         }
 
         // GET: Albums/Create
@@ -54,12 +55,12 @@ namespace Galerry.App.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Name,test,Id")] Album album)
+        public async Task<IActionResult> Create([Bind("Name")] AlbumViewModel album)
         {
             if (ModelState.IsValid)
             {
                 album.Id = Guid.NewGuid();
-                _context.Add(album);
+               // _context.Add(album);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
@@ -87,7 +88,7 @@ namespace Galerry.App.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("Name,test,Id")] Album album)
+        public async Task<IActionResult> Edit(Guid id, [Bind("Name,test,Id")] AlbumViewModel album)
         {
             if (id != album.Id)
             {
@@ -98,7 +99,7 @@ namespace Galerry.App.Controllers
             {
                 try
                 {
-                    _context.Update(album);
+                   // _context.Update(album);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -120,8 +121,8 @@ namespace Galerry.App.Controllers
         // GET: Albums/Delete/5
         public async Task<IActionResult> Delete(Guid? id)
         {
-            var album = await _context.Albums.SingleOrDefaultAsync(m => m.Id == id);
-            _context.Albums.Remove(album);
+            var AlbumViewModel = await _context.Albums.SingleOrDefaultAsync(m => m.Id == id);
+            _context.Albums.Remove(AlbumViewModel);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }

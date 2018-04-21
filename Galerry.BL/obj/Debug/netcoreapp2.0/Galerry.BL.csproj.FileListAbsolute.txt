@@ -1,0 +1,13 @@
+C:\Users\Matej\source\repos\IW5\Galerry.BL\bin\Debug\netcoreapp2.0\Galerry.BL.deps.json
+C:\Users\Matej\source\repos\IW5\Galerry.BL\bin\Debug\netcoreapp2.0\Galerry.BL.dll
+C:\Users\Matej\source\repos\IW5\Galerry.BL\bin\Debug\netcoreapp2.0\Galerry.BL.pdb
+C:\Users\Matej\source\repos\IW5\Galerry.BL\bin\Debug\netcoreapp2.0\Galerry.DAL.dll
+C:\Users\Matej\source\repos\IW5\Galerry.BL\bin\Debug\netcoreapp2.0\Galerry.DAL.pdb
+C:\Users\Matej\source\repos\IW5\Galerry.BL\obj\Debug\netcoreapp2.0\Galerry.BL.csprojResolveAssemblyReference.cache
+C:\Users\Matej\source\repos\IW5\Galerry.BL\obj\Debug\netcoreapp2.0\Galerry.BL.csproj.CoreCompileInputs.cache
+C:\Users\Matej\source\repos\IW5\Galerry.BL\obj\Debug\netcoreapp2.0\Galerry.BL.AssemblyInfoInputs.cache
+C:\Users\Matej\source\repos\IW5\Galerry.BL\obj\Debug\netcoreapp2.0\Galerry.BL.AssemblyInfo.cs
+C:\Users\Matej\source\repos\IW5\Galerry.BL\obj\Debug\netcoreapp2.0\Galerry.BL.csproj.CopyComplete
+C:\Users\Matej\source\repos\IW5\Galerry.BL\obj\Debug\netcoreapp2.0\Galerry.BL.dll
+C:\Users\Matej\source\repos\IW5\Galerry.BL\obj\Debug\netcoreapp2.0\Galerry.BL.pdb
+C:\Users\Matej\source\repos\IW5\Galerry.BL\bin\Debug\netcoreapp2.0\Galerry.DAL.dll.config

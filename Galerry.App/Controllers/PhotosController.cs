@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Galerry.App.Data;
+using Galerry.DAL;
 using Galerry.App.Models;
 
 namespace Galerry.App.Controllers
@@ -63,7 +63,7 @@ namespace Galerry.App.Controllers
             if (ModelState.IsValid)
             {
                 photos.Id = Guid.NewGuid();
-                _context.Add(photos);
+               // _context.Add(photos);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
@@ -102,7 +102,7 @@ namespace Galerry.App.Controllers
             {
                 try
                 {
-                    _context.Update(photos);
+                   // _context.Update(photos);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)

@@ -20,3 +20,9 @@ C:\Users\Matej\source\repos\IW5\Galerry.App\obj\Debug\netcoreapp2.0\Galerry.App.
 C:\Users\Matej\source\repos\IW5\Galerry.App\obj\Debug\netcoreapp2.0\Galerry.App.AssemblyInfo.cs
 C:\Users\Matej\source\repos\IW5\Galerry.App\obj\Debug\netcoreapp2.0\Galerry.App.dll
 C:\Users\Matej\source\repos\IW5\Galerry.App\obj\Debug\netcoreapp2.0\Galerry.App.pdb
+C:\Users\Matej\source\repos\IW5\Galerry.App\bin\Debug\netcoreapp2.0\Galerry.BL.dll
+C:\Users\Matej\source\repos\IW5\Galerry.App\bin\Debug\netcoreapp2.0\Galerry.DAL.dll
+C:\Users\Matej\source\repos\IW5\Galerry.App\bin\Debug\netcoreapp2.0\Galerry.BL.pdb
+C:\Users\Matej\source\repos\IW5\Galerry.App\bin\Debug\netcoreapp2.0\Galerry.DAL.pdb
+C:\Users\Matej\source\repos\IW5\Galerry.App\bin\Debug\netcoreapp2.0\Galerry.DAL.dll.config
+C:\Users\Matej\source\repos\IW5\Galerry.App\obj\Debug\netcoreapp2.0\Galerry.App.csproj.CopyComplete
